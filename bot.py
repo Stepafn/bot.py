@@ -9,7 +9,7 @@ dp = Dispatcher()
 parser = configargparse.ArgParser()
 parser.add_argument('--log-file', env_var='LOG_FILE', required=True, help='Log file')
 parser.add_argument('--log-level', env_var='LOG_LEVEL', default='INFO', help='Log level')
-parser.add_argument('--bot-token', env_var='TOKEN', required=True, help='bot token')
+parser.add_argument('--token', env_var='TOKEN', required=True, help='bot token')
 parser.add_argument('--log-format', env_var='LOG_FORMAT', default='%(asctime)s %(levelname)s %(message)s')
 
 config = parser.parse_args()
@@ -41,5 +41,5 @@ if __name__ == '__main__':
                         config.log_format,
                         config.log_file)
 
-    bot = Bot(config.bot_token)
+    bot = Bot(config.token)
     asyncio.run(main())
