@@ -1,0 +1,12 @@
+version: '3'
+services: 
+  bot:
+    container_name: stoic_jackson
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - config.env
+    volumes:
+      - ./${LOG_FILE}:/app/${LOG_FILE}
+    command: python bot.py
