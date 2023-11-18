@@ -8,5 +8,5 @@ services:
     env_file:
       - config.env
     volumes:
-      - ./${LOG_FILE}:/app/${LOG_FILE}
+      - ./logger.log:/app/logger.log
     command: python bot.py
