@@ -1,0 +1,6 @@
+In the same directory there are bash_script.sh, config.env
+
+1) launch the private registry docker run -d -p 5000:5000 --restart=always --name registry registry:2
+2) run your script ./bash_script.sh
+3) clean Docker from unnecessary images
+4) pull the image that you sent in the script to your private register doker run —env-file config.env localhost:5000/tele-bot:1.0
