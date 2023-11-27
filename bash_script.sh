@@ -6,7 +6,7 @@ GIT_REPO_NAME="bot.py"
 DOCKER_IMAGE_NAME="tele-bot:1.0"
 DOCKER_REGISTRY_USERNAME="stepafn"
 DOCKER_REGISTRY_PASSWORD="aA151104!"
-DOCKER_REGISTRY_URL="localhost:5000"
+DOCKER_REGISTRY_URL="https://hub.docker.com/repository/docker/stepafn/tele-bot1.0/general"
 
 git clone $GIT_REPO_URL
 
